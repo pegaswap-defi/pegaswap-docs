@@ -54,17 +54,10 @@ const Nav = () => {
           <div className="box-childpage">
             <Flex>
               <img src="./images/icon-docs/exchange.svg" />
-              <span className="box-title" onClick={() => setActive(true)}>
+              <span className="box-title" >
                 AMM / Exchange
               </span>
             </Flex>
-            <span
-
-              className={isActive ? "ic-rote" : "ic-right"}
-              onClick={() => setActive(!isActive)}
-            >
-              <i class="fa fa-angle-right"></i>
-            </span>
           </div>
           <div className={`${isActive ? "sub-menu-show" : "sub-menu-bar"}`}>
           </div>
@@ -88,16 +81,10 @@ const Nav = () => {
           <div className="box-childpage">
             <Flex>
               <img src="./images/icon-docs/yield.svg" />
-              <span className="box-title" onClick={() => setActives(true)}>
+              <span className="box-title" >
                 Yield Farming
               </span>
             </Flex>
-            <span
-              className={isActives ? "ic-rote" : "ic-right"}
-              onClick={() => setActives(!isActives)}
-            >
-              <i class="fa fa-angle-right"></i>
-            </span>
           </div>
 
         </StyledLink>
