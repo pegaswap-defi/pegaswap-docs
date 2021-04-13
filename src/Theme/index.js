@@ -174,7 +174,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .main{
     height:100%;
-    margin-top:68px;
+    margin-top:40px;
   }
   body.fix .side-bar{
     position:fixed;

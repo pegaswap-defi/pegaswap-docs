@@ -3,18 +3,18 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Search = () => {
-    return (
-      <GroupNav>
+  return (
+    <GroupNav>
       <SearchPage>
-            <form className="search-fr" method="GET" action="">
-              <button type="submit">
-                <span className="fa fa-search" />
-              </button>
-              <input required id="search" type="text" name="q"  className="input-text" maxLength={128} />
-            </form>
+        <form className="search-fr" method="GET" action="">
+          <button type="submit">
+            <span className="fa fa-search" />
+          </button>
+          <input required id="search" type="text" name="q" className="input-text" maxLength={128} />
+        </form>
       </SearchPage>
     </GroupNav>
-    )
+  )
 }
 
 const GroupNav = styled.div`
@@ -28,6 +28,9 @@ const GroupNav = styled.div`
 
 const SearchPage = styled.div`
   position:relative;
+  .fa-search {
+    color: white;
+  }
   form{
     position:relative;
     display: flex;

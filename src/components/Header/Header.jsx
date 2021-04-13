@@ -12,10 +12,10 @@ import ButtonMenu from '../ButtonMenu'
 const Header = () => {
   const [Status, setStatus] = useState(false);
 
-    return (
-      <StyleHeader>
-        <HeaderTop>
-          <svg
+  return (
+    <StyleHeader>
+      <HeaderTop>
+      <svg
             onClick={() => setStatus(true)}
             preserveAspectRatio="xMidYMid meet"
             height="1em"
@@ -35,23 +35,23 @@ const Header = () => {
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </g>
           </svg>
-          <div className="container inner">
-            <div className="row">
-              <Logo />
-              <div className="col-5 col-md-6 col-lg-10">
-                <HeaderItem>
-                  <Search />
-                  <ListIcon/>
-                </HeaderItem>
-              </div>
+        <div className="container inner">
+          <div className="row">
+            <Logo />
+            <div className="col-5 col-md-6 col-lg-10">
+              <HeaderItem>
+                <Search />
+                <ListIcon />
+              </HeaderItem>
             </div>
           </div>
-        </HeaderTop>
-        <StyledButtonMenu className={`${Status ? "active" : ""}`}>
-          <ButtonMenu onClose={() => setStatus(false)} status={Status} />
-        </StyledButtonMenu>
-      </StyleHeader>
-    );
+        </div>
+      </HeaderTop>
+      <StyledButtonMenu className={`${Status ? "active" : ""}`}>
+        <ButtonMenu onClose={() => setStatus(false)} status={Status} />
+      </StyledButtonMenu>
+    </StyleHeader>
+  );
 }
 const StyledButtonMenu = styled.div`
   opacity: 1;
@@ -68,10 +68,9 @@ const StyleHeader = styled.header`
   top:0;
   left:0;
   box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
-  background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(212, 218, 223);
+  background: radial-gradient(76.02% 75.41% at 1.84% 0%, rgb(158, 18, 141) 0%, rgb(122, 23, 136) 100%);
+    border-bottom: 1px solid rgb(212, 218, 223);
   padding:10px 0;
-  background: radial-gradient(circle,rgba(191,233,239,1) 0%,rgba(255,255,255,1) 100%);
 
   .inner{
     @media(min-width:1200px){

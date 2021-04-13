@@ -1,331 +1,246 @@
 import React, { useState, useEffect, } from "react";
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import {supportArray} from './Array'
 
 const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if  ( (window.scrollY > 72)){
+      if ((window.scrollY > 72)) {
         document.body.classList.add("fix");
       }
-      else{
+      else {
         document.body.classList.remove("fix");
       }
     });
-    }, []);
+  }, []);
 
-    const [isActive, setActive] = useState(false);
-    const [isActives, setActives] = useState(false);
+  const [isActive, setActive] = useState(false);
+  const [isActives, setActives] = useState(false);
 
-    const [isExchang1, setExchang1] = useState(false);
-    const [isExchang2, setExchang2] = useState(false);
 
-    const [isFarming1, setFarming1] = useState(false);
-    const [isFarming2, setFarming2] = useState(false);
-    const [isFarming3, setFarming3] = useState(false);
-    
-    
 
-    // const handleToggle = (id) => {
-    //   supportArray.find(id).document.
-    // };
-    const handleToggle = (id) => {
-      if ( !document.getElementById(id).classList.contains('dark-mode')){
-          document.getElementById(id).classList.add("dark-mode");
-      }else{
-        document.getElementById(id).classList.remove("dark-mode");
-      }
-    };
 
-    return (
-      <BoxSidebar>
-        <ul className="sidebar-top">
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/"
-          >
-            <img className="thum-nav" src="mf.png" alt="Juiceswap" />Welcome to JuiceSwap
-          </StyledLink>
-          {/* <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/migrating"
-          >
-            <img className="thum-nav" src="mt.png" alt="Juiceswap" />Migrating JuiceSwap v2 LP tokens
-          </StyledLink> */}
-        
-          {/* <BlankLink href="https://devhub.juiceswap.finance" target="_blank">
-            <img className="thum-nav" src="bdd.png" alt="Juiceswap" />Dev Docs
-          </BlankLink> */}
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/faq"
-          >
-            <img className="thum-nav" src="que.png" alt="Juiceswap" />FAQ
-          </StyledLink>
-        </ul>
-        <ul className="sidebar-middle">
-          <TitleSide>PRODUCTS</TitleSide>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/amm-exchange"
-          >
-            <div className="box-childpage">
+  return (
+    <BoxSidebar>
+      <ul className="sidebar-top">
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/"
+        >
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/faq"
+        >
+          <Flex>
+            <img src="./images/icon-docs/faq.svg" />
+            <span>FAQ</span>
+          </Flex>
+        </StyledLink>
+      </ul>
+      <ul className="sidebar-middle">
+        <TitleSide>PRODUCTS</TitleSide>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/amm-exchange"
+        >
+          <div className="box-childpage">
+            <Flex>
+              <img src="./images/icon-docs/exchange.svg" />
               <span className="box-title" onClick={() => setActive(true)}>
-              <img className="thum-nav" src="amm.png" alt="Juiceswap" />AMM / Exchange
+                AMM / Exchange
               </span>
-              <span
-                className={isActive ? "ic-rote" : "ic-right"}
-                onClick={() => setActive(!isActive)}
-              >
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </div>
-            <div className={`${isActive ? "sub-menu-show" : "sub-menu-bar"}`}>
-              <ul>
-                {/* <li> */}
-                  {/* <StyledLink to="/amm-exchange/swapping">
-                    <div className="box-childpage">
-                      <span
-                        className="box-title"
-                        onClick={() => setExchang1(true)}
-                      >
-                        Swapping
-                      </span>
-                      <span
-                        className={isExchang1 ? "ic-rote" : "ic-right"}
-                        onClick={() => setExchang1(!isExchang1)}
-                      >
-                        <i class="fa fa-angle-right"></i>
-                      </span>
-                    </div>
-                  </StyledLink> */}
-                  {/* <div  className={`${isExchang1 ? "sub-menu-show" : "sub-menu-bar"}`}>
-                    <ul>
-                      <li>
-                        <StyledLink to="/amm-exchange/swapping/juiceswap">
-                          juiceswap
-                        </StyledLink>
-                      </li>
-                      <li>
-                        <StyledLink to="/amm-exchange/swapping/lite.juiceswap">
-                          lite.juiceswap
-                        </StyledLink>
-                      </li>
-                      <li>
-                        <StyledLink to="/amm-exchange/swapping/how-to-swap-tokens">
-                          juiceswapclassic.org
-                        </StyledLink>
-                      </li>
-                    </ul>
-                  </div> */}
-                {/* </li>
-                <li> */}
-                  {/* <StyledLink to="/amm-exchange/liquidity-pools">
-                    
-                    <div className="box-childpage">
-                      <span
-                        className="box-title"
-                        onClick={() => setExchang2(true)}
-                      >
-                        Liquidity Pools
-                      </span>
-                      <span
-                        className={isExchang2 ? "ic-rote" : "ic-right"}
-                        onClick={() => setExchang2(!isExchang2)}
-                      >
-                        <i class="fa fa-angle-right"></i>
-                      </span>
-                    </div>
-                  </StyledLink> */}
-                  {/* <div className={`${isExchang2 ? "sub-menu-show" : "sub-menu-bar"}`}>
-                    <ul>
-                      <li>
-                        <StyledLink to="/amm-exchange/liquidity-pools/juiceswap">
-                          juiceswap
-                        </StyledLink>
-                      </li>
-                      <li>
-                        <StyledLink to="/amm-exchange/liquidity-pools/lite.juiceswap">
-                          lite.juiceswap
-                        </StyledLink>
-                      </li>
-                      <li>
-                        <StyledLink to="/amm-exchange/liquidity-pools/juiceswapclassic.org">
-                          juiceswapclassic.org
-                        </StyledLink>
-                      </li>
-                    </ul>
-                  </div> */}
-                {/* </li> */}
-                {/* <li>
-                  <StyledLink to="/amm-exchange/impermanent-loss">
-                    Impermanent loss
-                  </StyledLink>
-                </li> */}
-              </ul>
-            </div>
-          </StyledLink>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/product-pools"
-          >
-            <img className="thum-nav" src="juspool.png" alt="Juiceswap" />JuiceSwap Pools
-          </StyledLink>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/yield-farming"
-          >
-            <div className="box-childpage">
+            </Flex>
+            <span
+
+              className={isActive ? "ic-rote" : "ic-right"}
+              onClick={() => setActive(!isActive)}
+            >
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </div>
+          <div className={`${isActive ? "sub-menu-show" : "sub-menu-bar"}`}>
+          </div>
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/product-pools"
+        ><Flex>
+            <img src="./images/icon-docs/pool.svg" />
+            <span>PegaSwap Pools</span>
+          </Flex>
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/yield-farming"
+        >
+          <div className="box-childpage">
+            <Flex>
+              <img src="./images/icon-docs/yield.svg" />
               <span className="box-title" onClick={() => setActives(true)}>
-              <img className="thum-nav" src="yp.png" alt="Juiceswap" />Yield Farming
+                Yield Farming
               </span>
-              <span
-                className={isActives ? "ic-rote" : "ic-right"}
-                onClick={() => setActives(!isActives)}
-              >
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </div>
-       
+            </Flex>
+            <span
+              className={isActives ? "ic-rote" : "ic-right"}
+              onClick={() => setActives(!isActives)}
+            >
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </div>
+
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/product-staking"
+        >
+          <Flex>
+            <img src="./images/icon-docs/staking.svg" />
+            <span> PegaSwap Staking</span>
+          </Flex>
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/reclamation"
+        >
+          <Flex>
+            <img src="./images/icon-docs/sale.svg" />
+            <span>Sale</span>
+          </Flex>
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/about-nfts"
+        >
+          <Flex>
+            <img src="./images/icon-docs/nfts.svg" />
+            <span>NFTs</span>
+          </Flex>
+        </StyledLink>
+      </ul>
+      <ul className="sidebar-middle">
+        <TitleSide>The Nominations</TitleSide>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/the-basics"
+        >
+          <Flex>
+            <img src="./images/icon-docs/basic.svg" />
+
+            <span> The Basics</span>
+          </Flex>
+        </StyledLink>
+      </ul>
+      <ul className="sidebar-middle">
+        <TitleSide>Guides</TitleSide>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/how-to-use-metamask-for-binance-smart-chain"
+        >
+          <Flex>
+            <img src="./images/icon-docs/guide1.svg" />
+
+            <span>How to use MetaMask For Binance Smart Chain</span>
+          </Flex>
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/how-to-set-up-and-use-trust-wallet-for-binance-smart-chain"
+        >
+          <Flex>
+            <img src="./images/icon-docs/guide2.svg" />
+
+            <span>How to Set Up and Use Trust Wallet for Binance Smart Chain</span>
+          </Flex>
+        </StyledLink>
+      </ul>
+      <ul className="sidebar-middle">
+        <TitleSide>Governance</TitleSide>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/current-governance-mdoel"
+        >
+          <Flex>
+            <img src="./images/icon-docs/Curent.svg" />
+
+            <span>Current governance model</span>
+          </Flex>
+        </StyledLink>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/proposals-and-voting"
+        >
+          <Flex>
+            <img src="./images/icon-docs/proposal.svg" />
+
+            <span>Proposals &amp; voting</span>
+          </Flex>
+        </StyledLink>
+      </ul>
+      <ul className="sidebar-middle">
+        <TitleSide>Ecosystem</TitleSide>
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/all-official-pegaswap-links"
+        >
+          Official PegaSwap links
           </StyledLink>
-          {/* <StyledLink
+        {/* <StyledLink
             className="link-mode"
             exact
             activeClassName="active"
-            to="/lending-bentobox"
+            to="/how-to-build-on-Pegaswap"
           >
-            <img className="thum-nav" src="ldd.png" alt="Juiceswap" />Lending (BentoBox)
+            <img className="thum-nav" src="bbd.png" alt="Pegaswap" />Build on PegaSwap
           </StyledLink> */}
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/product-staking"
-          >
-            <img className="thum-nav" src="jusstaking.png" alt="Juiceswap" />JuiceSwap Staking
-          </StyledLink>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/reclamation"
-          >
-            <img className="thum-nav" src="ic-rec.png" alt="Juiceswap" />Reclamation
-          </StyledLink>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/about-nfts"
-          >
-            <img className="thum-nav" src="ord.png" alt="Juiceswap" />NFTs
-          </StyledLink>
-        </ul>
-        <ul className="sidebar-middle">
-          <TitleSide>The Nominations</TitleSide>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/the-basics"
-          >
-            <img className="thum-nav" src="bss.png" alt="Juiceswap" />The Basics
-          </StyledLink>
-        </ul>
-        <ul className="sidebar-middle">
-          <TitleSide>Guides</TitleSide>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/how-to-add-tokens-to-juiceswap-exchange"
-          >
-              <img className="thum-nav" src="tktoken.png" alt="Juiceswap" /> How to add tokens to JuiceSwap Exchange
-          </StyledLink>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/how-to-farm-with-juiceswap-tokens"
-          >
-              <img className="thum-nav" src="tkfarm.png" alt="Juiceswap" /> How to Farm with Juiceswap Tokens
-          </StyledLink>
-          {/* <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/how-to-stake-juiceswap-for-xjuiceswap"
-          >
-              <img className="thum-nav" src="tkstak.png" alt="Juiceswap" /> How to Stake Juiceswap for xJuiceswap
-          </StyledLink> */}
-        </ul>
-        <ul className="sidebar-middle">
-          <TitleSide>Governance</TitleSide>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/current-governance-mdoel"
-          >
-            <img className="thum-nav" src="crr.png" alt="Juiceswap" />Current governance model
-          </StyledLink>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/proposals-and-voting"
-          >
-            <img className="thum-nav" src="pross.png" alt="Juiceswap" /> Proposals &amp; voting
-          </StyledLink>
-        </ul>
-        <ul className="sidebar-middle">
-          <TitleSide>Ecosystem</TitleSide>
-          <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/all-official-juiceswap-links"
-          >
-            <img className="thum-nav" src="ll.png" alt="Juiceswap" />Official JuiceSwap links
-          </StyledLink>
-          {/* <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/how-to-build-on-Juiceswap"
-          >
-            <img className="thum-nav" src="bbd.png" alt="Juiceswap" />Build on JuiceSwap
-          </StyledLink> */}
-          {/* <StyledLink
+        {/* <StyledLink
             className="link-mode"
             exact
             activeClassName="active"
             to="/presskit-and-branding-assets"
           >
-             <img className="thum-nav" src="cp.png" alt="Juiceswap" />Presskit &amp; Branding Assets
+             <img className="thum-nav" src="cp.png" alt="Pegaswap" />Presskit &amp; Branding Assets
           </StyledLink> */}
-        </ul>
-      </BoxSidebar>
-    );
+      </ul>
+    </BoxSidebar>
+  );
 }
 
 
 
-
+const Flex = styled.div`
+    display: flex;
+    align-items: center;
+`
 const BoxSidebar = styled.div`
     position:relative;
 
@@ -338,33 +253,19 @@ const BoxSidebar = styled.div`
 
     @media(max-width:1025px){
     }
+    img {
+      width: 20px;
+      margin-right: 5px;
+    }
   
 `
 
-const LinkParen = styled.a`
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  color: #696868;
-  margin-bottom: 7px;
-  display: block;
-  padding: 5px 0;
-  .down-menu{
-    font-size:12px;
-  }
-  &:hover {
-    color: #805e49;
-  }
-  &.active {
-    color: #000;
-  }
-  
-`
+
 
 
 const TitleSide = styled.h3`
   font-size: 16px;
-  color: #696868;
+  color: black;
   font-weight: bold;
   margin-bottom: 10px;
   
@@ -374,7 +275,7 @@ const BlankLink = styled.a`
   text-decoration: none!important;
   font-size: 13px;
   font-weight: 500;
-  color: #696868;
+  color: black;
   margin-bottom: 7px;
   position:relative;
   display: block;
@@ -384,7 +285,6 @@ const BlankLink = styled.a`
     max-width:18px;
     width:100%;
     margin-right:5px;
-    margin-top:-5px;
   }
 `
 
@@ -404,7 +304,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none!important;
   font-size: 13px;
   font-weight: 500;
-  color: #696868;
+  color: black;
   margin-bottom: 7px;
   position:relative;
   // z-index: 5;
@@ -414,10 +314,10 @@ const StyledLink = styled(NavLink)`
   //   z-index: 10;
   // }
   &:hover {
-    color: #805e49;
+    color:black;
   }
   &.active {
-    color: #99378E;
+    color: black;
     font-weight:bold;
   }
   @media (max-width: 400px) {
@@ -434,7 +334,7 @@ const StyledLink = styled(NavLink)`
     // float:right;
     display:flex;
     align-items:center;
-    justify-content:center;
+    pegatify-content:center;
   }
   .ic-rote{
     width:25px;
@@ -443,7 +343,7 @@ const StyledLink = styled(NavLink)`
     // float:right;
     display:flex;
     align-items:center;
-    justify-content:center;
+    pegatify-content:center;
     i{
       transition:ease-in-out .5s all;
       transform: rotate(-90deg);
@@ -454,7 +354,6 @@ const StyledLink = styled(NavLink)`
     max-width:18px;
     width:100%;
     margin-right:5px;
-    margin-top:-5px;
   }
 `
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import '../../fontawesome-free-5.15.2-web/css/all.css'
 
 
 const ButtonTotop = () => {
@@ -27,12 +28,12 @@ const ButtonTotop = () => {
 
   return (
     <ToTop>
-    {isVisible && (
-      <div className="itemtop" onClick={scrollToTop}>
-        🍓
-      </div>
-    )}
-  </ToTop>
+      {isVisible && (
+        <div className="itemtop" onClick={scrollToTop}>
+          <i className="fas fa-chevron-up" />
+        </div>
+      )}
+    </ToTop>
   );
 };
 
@@ -48,12 +49,13 @@ const ToTop = styled.div`
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background: #34999b;
+    background: #00000033;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
     transition: ease-in-out .5s all;
+    color: white;
 
     &:hover{
       background: #082844;

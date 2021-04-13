@@ -3,22 +3,22 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Nav = () => {
-    return (
-        <StyledNav>
-              <StyledLink className="link-mode" exact activeClassName="active" to="/">
-                  Juiceswap.fi
+  return (
+    <StyledNav>
+      <StyledLink className="link-mode" exact activeClassName="active" to="/">
+        Pegaswap.fi
               </StyledLink>
-              
-              <StyledLink className="link-mode" exact activeClassName="active" to="/farms">
-                  lite.Juiceswap.fi
+
+      <StyledLink className="link-mode" exact activeClassName="active" to="/farms">
+        lite.Pegaswap.fi
               </StyledLink>
-              <StyledLink className="link-mode" exact activeClassName="active" to="/pools">
-                  analytics
+      <StyledLink className="link-mode" exact activeClassName="active" to="/pools">
+        analytics
               </StyledLink>
-        </StyledNav>
-        
-     
-    )
+    </StyledNav>
+
+
+  )
 }
 
 const StyledNav = styled.nav`

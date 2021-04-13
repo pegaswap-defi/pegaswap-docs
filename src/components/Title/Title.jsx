@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Title = ({ title , image}) => {
-  
+const Title = ({ title, image }) => {
+
   return <ContentTitle className="title">
-  <img className="thum-nav" src={image}   alt="Justswap" /> {title}
+    <img className="thum-nav" src={image} alt="Justswap" /> {title}
   </ContentTitle>;
 };
 
@@ -22,7 +22,6 @@ const ContentTitle = styled.h3`
     img{
       max-width:32px;
       width: 100%;
-      margin-top:-7px;
     }
 `;
 
