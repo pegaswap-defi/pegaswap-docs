@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Logo = () => {
     return (
       <div className="col-7 col-md-6 col-lg-2">
-        <StyledLink to="/"><img src="logo.png" alt="Pegaswap" /></StyledLink>
+        <StyledLink to="/"><img src="../logo.png" alt="Pegaswap" /></StyledLink>
       </div>
     )
 }

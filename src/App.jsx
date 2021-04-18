@@ -10,9 +10,9 @@ import ButtonMenu from './components/ButtonMenu'
 
 import ButtonTotop from './components/ButtonTotop'
 import TrustWallet from './views/TrustWallet'
+
+import Binance from './views/BinanceSmartChange'
 import Amm from './views/Amm'
-
-
 
 
 
@@ -33,13 +33,16 @@ const App = () => {
               <SideBar />
             </BoxSidebar>
             <BoxContent>
+                 <Amm />
+                 <Binance />
+
+
               <Switch>
                 <Route path="/" exact>
                   <Home />
                 </Route>
-                <Route path="/amm-exchange">
-                  <Amm />
-                </Route>
+                {/* Binance Smart Change */}
+                {/* Amm */}
                 <Route path="/how-to-use-metamask-for-binance-smart-chain">
                   <Home />
                 </Route>
@@ -50,7 +53,6 @@ const App = () => {
             </BoxContent>
           </Layout>
         </div>
-
       </Router>
       <ButtonTotop />
     </StyledScreen>
