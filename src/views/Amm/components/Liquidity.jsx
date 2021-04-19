@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Title from '../../Title'
+import Title from '../../../components/TitleChild'
 
 
 
@@ -9,7 +9,7 @@ const Introduction = ({props}) => {
 
     return(
         <StyledPage>
-            <Title>What is a liquidity pool?</Title>
+            <Title title="What is a liquidity pool?"></Title>
             <p>Liquidity providers (LPs) add funds to liquidity pools. You could think of a liquidity pool as a big pile of funds that traders can trade against. In return for providing liquidity to the protocol, LPs earn fees from the trades that happen in their pool. In the case of Uniswap, LPs deposit an equivalent value of two tokens – for example, 50% ETH and 50% DAI to the ETH/DAI pool.</p>
             <p>Hang on, so anyone can become a market maker? Indeed! It’s quite easy to add funds to a liquidity pool. The rewards are determined by the protocol. For example, Uniswap v2 charges traders 0.3% that goes directly to LPs. Other platforms or forks may charge less to attract more liquidity providers to their pool.</p>
             <p>Why is attracting liquidity important? Due to the way AMMs work, the more liquidity there is in the pool, the less slippage large orders may incur. That, in turn, may attract more volume to the platform, and so on.</p>
@@ -23,7 +23,7 @@ const Introduction = ({props}) => {
 
 const StyledPage = styled.div`
     p {
-        font-size: 20px;
+        font-size: 1rem;
         margin-top: 20px;
     }
 `
