@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import Title from '../../components/TitleChild'
 
 
 const TrustWallet = () => {
 
     return (
         <StyledPage>
-            <h1>How to Set Up and Use Trust Wallet for Binance Smart Chain</h1>
+            <Title title="How to Set Up and Use Trust Wallet for Binance Smart Chain"/>
             <p>Here’s how you can get set up on Trust Wallet and start using Binance Smart Chain in just a couple of minutes.</p>
             <h2>Setting up your wallet for Binance Smart Chain</h2>
             <p>1) <a href="https://share.trustwallet.com/H6U8pDHOMab">Download Trust Wallet here</a>. If you already have Trust Wallet, make sure your app is up to date. </p>

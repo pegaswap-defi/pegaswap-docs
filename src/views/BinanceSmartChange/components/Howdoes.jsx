@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Title from '../../Title'
+import Title from '../../../components/TitleChild'
 
 
 
@@ -9,7 +9,7 @@ const Introduction = ({props}) => {
 
     return(
         <StyledPage>
-            <Title>How does Binance Smart Chain work?</Title>
+            <Title title="How does Binance Smart Chain work?"></Title>
             <h2>Consensus</h2>
             <p>Binance Smart Chain achieves ~3 second block times with a Proof-of-Stake consensus algorithm. Specifically, it uses something called Proof of Staked Authority (or PoSA), where participants stake BNB to become validators. If they propose a valid block, they’ll receive transaction fees from the transactions included in it.</p>
             <p>Note that, unlike many protocols, there is no block subsidy of freshly-minted BNB, as BNB is not inflationary. On the contrary, the supply of BNB decreases over time, as the Binance team regularly conducts coin burns.</p>
@@ -24,7 +24,7 @@ const Introduction = ({props}) => {
 
 const StyledPage = styled.div`
     p {
-        font-size: 20px;
+        font-size: 1rem;
         margin-top: 20px;
     }
     h2 {

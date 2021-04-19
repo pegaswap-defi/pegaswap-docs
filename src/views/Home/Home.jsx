@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import Title from '../../components/Title'
+import Title from '../../components/TitleChild'
 
 // import Item from './components/Item'
 // import CountUp from 'react-countup';
@@ -9,7 +9,7 @@ import Title from '../../components/Title'
 const Home = () => {
   return (
     <Box_home>
-      <Title image="mnoy.png" title="Welcome to PegaSwap" />
+      <Title title="How to use Metamask For Binance Smart Chain"></Title>
       <ThumPage>
           <img src="./images/thumb1.jpg" alt=""/>
       </ThumPage>
@@ -34,29 +34,29 @@ const Home = () => {
       </ThumPage>
       <p>The workflow is the same for all browsers</p>
       <H2>Create an account in MetaMask for Binance Smart Chain</H2>
-      <h3>1.	Click on the “Create a wallet” button</h3>
+      <h4>1.	Click on the “Create a wallet” button</h4>
       <ThumPage>
           <img src="./images/metamask3.png" alt=""/>
       </ThumPage>
-      <h3>2. Create Password of at least 8 characters</h3>
+      <h4>2. Create Password of at least 8 characters</h4>
       <ThumPage>
           <img src="./images/metamask4.png" alt=""/>
       </ThumPage>
-      <h3>3. Click on “Create” and then write down your backup phrase.</h3>
+      <h4>3. Click on “Create” and then write down your backup phrase.</h4>
       <ThumPage>
           <img src="./images/metamask5.png" alt=""/>
       </ThumPage>
-      <h3>4. Select each phrase in order to make sure it is correct then click “Confirm”.</h3>
+      <h4>4. Select each phrase in order to make sure it is correct then click “Confirm”.</h4>
       <ThumPage>
           <img src="./images/metamask6.png" alt=""/>
       </ThumPage>
       <p>Congratulations! you have create your MetaMask account!</p>
       <H2>Connect Your MetaMask With Binance Smart Chain</H2>
-      <h3>1.	Go to setting page</h3>
+      <h4>1.	Go to setting page</h4>
       <ThumPage>
           <img src="./images/metamask7.png" alt=""/>
       </ThumPage>
-      <h3>2.	Add a new network</h3>
+      <h4>2.	Add a new network</h4>
       <ThumPage>
           <img src="./images/metamask8.png" alt=""/>
       </ThumPage>
@@ -74,11 +74,11 @@ const Home = () => {
         <li>Symbol: BNB</li>
         <li>Block Explorer: <a href="https://bscscan.com">https://bscscan.com</a></li>
       </ul>
-      <h3>3.	Claim some testnet token to your account Click on your address for copy</h3>
+      <h4>3.	Claim some testnet token to your account Click on your address for copy</h4>
       <ThumPage>
           <img src="./images/metamask10.png" alt=""/>
       </ThumPage>
-      <h3>4.  Go to faucet page: <a href="https://testnet.binance.org/faucet-smart">https://testnet.binance.org/faucet-smart</a>, then paste your address in the box and click on “Give me BNB”</h3>
+      <h4>4.  Go to faucet page: <a href="https://testnet.binance.org/faucet-smart">https://testnet.binance.org/faucet-smart</a>, then paste your address in the box and click on “Give me BNB”</h4>
       <ThumPage>
           <img src="./images/metamask11.png" alt=""/>
       </ThumPage>
@@ -87,27 +87,27 @@ const Home = () => {
           <img src="./images/metamask12.png" alt=""/>
       </ThumPage>
       <H2>Transfer BNB to other Binance Smart Chain address</H2>
-      <h3>1.	Log in to your MetaMask</h3>
+      <h4>1.	Log in to your MetaMask</h4>
       <ThumPage>
           <img src="./images/metamask13.png" alt=""/>
       </ThumPage>
-      <h3>2. Click on Send button</h3>
+      <h4>2. Click on Send button</h4>
       <ThumPage>
           <img src="./images/metamask14.png" alt=""/>
       </ThumPage>
-      <h3>3.	Copy the receiver’s address in the box</h3>
+      <h4>3.	Copy the receiver’s address in the box</h4>
       <ThumPage>
           <img src="./images/metamask15.png" alt=""/>
       </ThumPage>
-      <h3>4. Input the amount</h3>
+      <h4>4. Input the amount</h4>
       <ThumPage>
           <img src="./images/metamask16.png" alt=""/>
       </ThumPage>
-      <h3>5.	Go to Advanced Options to modify default gas price when necessary</h3>
+      <h4>5.	Go to Advanced Options to modify default gas price when necessary</h4>
       <ThumPage>
           <img src="./images/metamask17.png" alt=""/>
       </ThumPage>
-      <h3>6.	Confirm your transaction, then click Next</h3>
+      <h4>6.	Confirm your transaction, then click Next</h4>
       <ThumPage>
           <img src="./images/metamask18.png" alt=""/>
       </ThumPage>
@@ -129,9 +129,10 @@ const Box_home = styled.section`
       list-style: none;
     }
   }
-  h3 {
-    font-size: 20px;
+  h4 {
+    font-size: 18px;
   }
+  
 `
 const Thumb = styled.img`
   max-width: 900px;
