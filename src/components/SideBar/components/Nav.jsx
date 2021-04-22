@@ -18,6 +18,11 @@ const Nav = () => {
   const [isActive, setActive] = useState(false);
   const [binance, setBinance] = useState(false);
   const [amm, setAmm] = useState(false);
+  const [welcome, setWelcome] = useState(false);
+
+  const openWelcome = () => {
+    setWelcome(!welcome);
+  }
 
   const openBinance = () => {
     setBinance(!binance);
@@ -31,35 +36,35 @@ const Nav = () => {
 
   return (
     <BoxSidebar>
-      <ul className="sidebar-top">
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/"
-        >
-        </StyledLink>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/faq"
-        >
-          <Flex>
-            <img src="../images/icon-docs/faq.svg" />
-            <span>FAQ</span>
-          </Flex>
-        </StyledLink>
+      <ul className="sidebar-top" style={{marginTop: "20px"}}>
+      <TitleMenuDropdown className="box-childpage">
+            <Flex onClick={openWelcome}>
+              <span className="box-title" style={{fontWeight: 'bold', fontSize: '16px'}}>
+                Welcome to Pegaswap
+              </span>
+              <span style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              </span>
+            </Flex>
+            <WrapperWelcomeLink>
+              <StyledLink activeClassName='active' to='/welcome/introduction'>Introduction</StyledLink>
+              <StyledLink activeClassName='active' to='/welcome/what-is-pegaswap'>What Is PegaSwap ? </StyledLink>
+              <StyledLink activeClassName='active' to='/welcome/pegaswap-is-on-the-binance-smart-chain'>PegaSwap is on the Binance Smart Chain</StyledLink>
+              <StyledLink activeClassName='active' to='/welcome/what-can-you-do-on-pegaswao'>What can you do on PegaSwap?</StyledLink> 
+              <StyledLink activeClassName='active' to='/welcome/low-fees-and-fast-transaction'>Low Fees and Fast Transactions</StyledLink> 
+              <StyledLink activeClassName='active' to='/welcome/no-kyc-requirement'>No KYC Requirement</StyledLink> 
+              <StyledLink activeClassName='active' to='/welcome/pegaswap-fees'>PegaSwap Fees</StyledLink> 
+              <StyledLink activeClassName='active' to='/welcome/community-socials'>Community & Socials</StyledLink> 
+            </WrapperWelcomeLink>
+       </TitleMenuDropdown>
       </ul>
       <ul className="sidebar-middle">
-        <TitleSide>PRODUCTS</TitleSide>
-       
+          <TitleSide>General</TitleSide>
           <TitleMenuDropdown className="box-childpage">
             <Flex onClick={openBinance}>
               <img src="../images/icon-docs/yield.svg" />
               <div>
               <span className="box-title" >
-                Binance Smart Change 
+                Binance Smart Chain 
               </span>
               <i style={{transform: !binance ? 'rotate(0)' : 'rotate(90deg)', transition: 'all ease-in-out .3s'}} className="fas fa-chevron-right"></i>
               </div>
@@ -244,10 +249,27 @@ const Nav = () => {
           >
              <img className="thum-nav" src="cp.png" alt="Pegaswap" />Presskit &amp; Branding Assets
           </StyledLink> */}
+          <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/faq"
+        >
+          <Flex>
+            <img src="../images/icon-docs/faq.svg" />
+            <span>FAQ</span>
+          </Flex>
+        </StyledLink>
       </ul>
+      
     </BoxSidebar>
   );
 }
+
+
+const WrapperWelcomeLink = styled.div`
+  padding-left: 20px;
+`
 
 const TitleMenuDropdown = styled.div`
   cursor: pointer;
