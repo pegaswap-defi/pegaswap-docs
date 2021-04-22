@@ -13,7 +13,7 @@ import TrustWallet from './views/TrustWallet'
 
 import Binance from './views/BinanceSmartChange'
 import Amm from './views/Amm'
-
+import Welcome from './views/Welcome'
 
 
 
@@ -33,10 +33,9 @@ const App = () => {
               <SideBar />
             </BoxSidebar>
             <BoxContent>
-                 <Amm />
-                 <Binance />
-
-
+              <Welcome />
+              <Amm />
+              <Binance />
               <Switch>
                 <Route path="/" exact>
                   <Home />
