@@ -36,64 +36,64 @@ const Nav = () => {
 
   return (
     <BoxSidebar>
-      <ul className="sidebar-top" style={{marginTop: "20px"}}>
-      <TitleMenuDropdown className="box-childpage">
-            <Flex onClick={openWelcome}>
-              <span className="box-title" style={{fontWeight: 'bold', fontSize: '16px'}}>
-                Welcome to Pegaswap
+      <ul className="sidebar-top" style={{ marginTop: "20px" }}>
+        <TitleMenuDropdown className="box-childpage">
+          <Flex onClick={openWelcome}>
+            <span className="box-title" style={{ fontWeight: 'bold', fontSize: '16px' }}>
+              Welcome to Pegaswap
               </span>
-              <span style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              </span>
-            </Flex>
-            <WrapperWelcomeLink>
-              <StyledLink activeClassName='active' to='/welcome/introduction'>Introduction</StyledLink>
-              <StyledLink activeClassName='active' to='/welcome/what-is-pegaswap'>What Is PegaSwap ? </StyledLink>
-              <StyledLink activeClassName='active' to='/welcome/pegaswap-is-on-the-binance-smart-chain'>PegaSwap is on the Binance Smart Chain</StyledLink>
-              <StyledLink activeClassName='active' to='/welcome/what-can-you-do-on-pegaswao'>What can you do on PegaSwap?</StyledLink> 
-              <StyledLink activeClassName='active' to='/welcome/low-fees-and-fast-transaction'>Low Fees and Fast Transactions</StyledLink> 
-              <StyledLink activeClassName='active' to='/welcome/no-kyc-requirement'>No KYC Requirement</StyledLink> 
-              <StyledLink activeClassName='active' to='/welcome/pegaswap-fees'>PegaSwap Fees</StyledLink> 
-              <StyledLink activeClassName='active' to='/welcome/community-socials'>Community & Socials</StyledLink> 
-            </WrapperWelcomeLink>
-       </TitleMenuDropdown>
+            <span style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            </span>
+          </Flex>
+          <WrapperWelcomeLink>
+            <StyledLink activeClassName='active' to='/welcome/introduction'>Introduction</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/what-is-pegaswap'>What Is PegaSwap ? </StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/pegaswap-is-on-the-binance-smart-chain'>PegaSwap is on the Binance Smart Chain</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/what-can-you-do-on-pegaswao'>What can you do on PegaSwap?</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/low-fees-and-fast-transaction'>Low Fees and Fast Transactions</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/no-kyc-requirement'>No KYC Requirement</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/pegaswap-fees'>PegaSwap Fees</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/community-socials'>Community & Socials</StyledLink>
+          </WrapperWelcomeLink>
+        </TitleMenuDropdown>
       </ul>
       <ul className="sidebar-middle">
-          <TitleSide>General</TitleSide>
-          <TitleMenuDropdown className="box-childpage">
-            <Flex onClick={openBinance}>
-              <img src="../images/icon-docs/yield.svg" />
-              <div>
+        <TitleSide>General</TitleSide>
+        <TitleMenuDropdown className="box-childpage">
+          <Flex onClick={openBinance}>
+            <img src="../images/icon-docs/yield.svg" />
+            <div>
               <span className="box-title" >
-                Binance Smart Chain 
+                Binance Smart Chain
               </span>
-              <i style={{transform: !binance ? 'rotate(0)' : 'rotate(90deg)', transition: 'all ease-in-out .3s'}} className="fas fa-chevron-right"></i>
-              </div>
-            </Flex>
-          <DropdownMenu style={{maxHeight: !binance ? '0' : '400px'}} >
-              <StyledDropdownLink activeClassName='active' to='/binance/introduction'>Introduction</StyledDropdownLink>
-              <StyledDropdownLink activeClassName='active' to='/binance/what-is-binance-smart-chain'>What is Binance Smart Chain?</StyledDropdownLink>
-              <StyledDropdownLink activeClassName='active' to='/binance/how-does-binance-smart-chain-work'>How does Binance Smart Chain work?</StyledDropdownLink>
-              <StyledDropdownLink activeClassName='active' to='/binance/decentralized-finance-on-binance-smart-chain'>Decentralized Finance on Binance Smart Chain</StyledDropdownLink> 
-              <StyledDropdownLink activeClassName='active' to='/binance/closing-thoughts'>Closing thoughts</StyledDropdownLink> 
+              <i style={{ transform: !binance ? 'rotate(0)' : 'rotate(90deg)', transition: 'all ease-in-out .3s' }} className="fas fa-chevron-right"></i>
+            </div>
+          </Flex>
+          <DropdownMenu style={{ maxHeight: !binance ? '0' : '400px' }} >
+            <StyledDropdownLink activeClassName='active' to='/binance/introduction'>Introduction</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/binance/what-is-binance-smart-chain'>What is Binance Smart Chain?</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/binance/how-does-binance-smart-chain-work'>How does Binance Smart Chain work?</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/binance/decentralized-finance-on-binance-smart-chain'>Decentralized Finance on Binance Smart Chain</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/binance/closing-thoughts'>Closing thoughts</StyledDropdownLink>
           </DropdownMenu>
-          </TitleMenuDropdown>
-          <TitleMenuDropdown className="box-childpage">
-            <Flex onClick={openAmm}>
-              <img src="../images/icon-docs/nfts.svg" />
-              <div>
+        </TitleMenuDropdown>
+        <TitleMenuDropdown className="box-childpage">
+          <Flex onClick={openAmm}>
+            <img src="../images/icon-docs/nfts.svg" />
+            <div>
               <span className="box-title" >
-              AMM / Exchange 
+                AMM / Exchange
               </span>
-              <i style={{transform: !amm ? 'rotate(0)' : 'rotate(90deg)', transition: 'all ease-in-out .3s'}} className="fas fa-chevron-right"></i>
-              </div>
-            </Flex>
-          <DropdownMenu style={{maxHeight: !amm ? '0' : '400px'}} >
-              <StyledDropdownLink activeClassName='active' to='/amm/how-does-an-automated-market-maker-amm-work'>How does an automated market maker &#40;AMM&#41; work?</StyledDropdownLink>
-              <StyledDropdownLink activeClassName='active' to='/amm/what-is-a-liquidity-pool'>What is a liquidity pool?</StyledDropdownLink> 
-              <StyledDropdownLink activeClassName='active' to='/amm/what-is-impermanent-loss'>What is impermanent loss?</StyledDropdownLink>
-              <StyledDropdownLink activeClassName='active' to='/amm/closing-thoughts'>Closing thoughts</StyledDropdownLink>
+              <i style={{ transform: !amm ? 'rotate(0)' : 'rotate(90deg)', transition: 'all ease-in-out .3s' }} className="fas fa-chevron-right"></i>
+            </div>
+          </Flex>
+          <DropdownMenu style={{ maxHeight: !amm ? '0' : '400px' }} >
+            <StyledDropdownLink activeClassName='active' to='/amm/how-does-an-automated-market-maker-amm-work'>How does an automated market maker &#40;AMM&#41; work?</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/amm/what-is-a-liquidity-pool'>What is a liquidity pool?</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/amm/what-is-impermanent-loss'>What is impermanent loss?</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/amm/closing-thoughts'>Closing thoughts</StyledDropdownLink>
           </DropdownMenu>
-          </TitleMenuDropdown>
+        </TitleMenuDropdown>
         <StyledLink
           className="link-mode"
           exact
@@ -135,7 +135,7 @@ const Nav = () => {
           className="link-mode"
           exact
           activeClassName="active"
-          to="/reclamation"
+          to="/sale"
         >
           <Flex>
             <img src="../images/icon-docs/sale.svg" />
@@ -249,7 +249,7 @@ const Nav = () => {
           >
              <img className="thum-nav" src="cp.png" alt="Pegaswap" />Presskit &amp; Branding Assets
           </StyledLink> */}
-          <StyledLink
+        <StyledLink
           className="link-mode"
           exact
           activeClassName="active"
@@ -261,7 +261,6 @@ const Nav = () => {
           </Flex>
         </StyledLink>
       </ul>
-      
     </BoxSidebar>
   );
 }
