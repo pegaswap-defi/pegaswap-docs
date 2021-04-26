@@ -261,7 +261,6 @@ const Nav = () => {
           </Flex>
         </StyledLink>
       </ul>
-
     </BoxSidebar>
   );
 }
