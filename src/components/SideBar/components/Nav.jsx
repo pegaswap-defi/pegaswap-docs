@@ -164,14 +164,13 @@ const Nav = () => {
         >
           <Flex>
             <img src="../images/icon-docs/basic.svg" />
-
             <span> The Basics</span>
           </Flex>
         </StyledLink>
       </ul>
       <ul className="sidebar-middle">
         <TitleSide>Guides</TitleSide>
-        <StyledLink
+        {/* <StyledLink
           className="link-mode"
           exact
           activeClassName="active"
@@ -179,10 +178,9 @@ const Nav = () => {
         >
           <Flex>
             <img src="../images/icon-docs/guide1.svg" />
-
             <span>How to use MetaMask For Binance Smart Chain</span>
           </Flex>
-        </StyledLink>
+        </StyledLink> */}
         <StyledLink
           className="link-mode"
           exact
@@ -191,7 +189,6 @@ const Nav = () => {
         >
           <Flex>
             <img src="../images/icon-docs/guide2.svg" />
-
             <span>How to Set Up and Use Trust Wallet for Binance Smart Chain</span>
           </Flex>
         </StyledLink>
@@ -233,22 +230,6 @@ const Nav = () => {
         >
           Official PegaSwap links
           </StyledLink>
-        {/* <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/how-to-build-on-Pegaswap"
-          >
-            <img className="thum-nav" src="bbd.png" alt="Pegaswap" />Build on PegaSwap
-          </StyledLink> */}
-        {/* <StyledLink
-            className="link-mode"
-            exact
-            activeClassName="active"
-            to="/presskit-and-branding-assets"
-          >
-             <img className="thum-nav" src="cp.png" alt="Pegaswap" />Presskit &amp; Branding Assets
-          </StyledLink> */}
         <StyledLink
           className="link-mode"
           exact
