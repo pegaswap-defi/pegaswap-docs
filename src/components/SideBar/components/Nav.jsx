@@ -170,7 +170,7 @@ const Nav = () => {
       </ul>
       <ul className="sidebar-middle">
         <TitleSide>Guides</TitleSide>
-        {/* <StyledLink
+        <StyledLink
           className="link-mode"
           exact
           activeClassName="active"
@@ -180,7 +180,7 @@ const Nav = () => {
             <img src="../images/icon-docs/guide1.svg" />
             <span>How to use MetaMask For Binance Smart Chain</span>
           </Flex>
-        </StyledLink> */}
+        </StyledLink>
         <StyledLink
           className="link-mode"
           exact
