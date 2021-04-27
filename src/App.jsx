@@ -27,7 +27,7 @@ const App = () => {
         <Header />
         <div className="main">
           <Layout>
-            {/* <Menu/> */}
+            {/* <Menu /> */}
             <ButtonMenu />
             <BoxSidebar>
               <SideBar />
@@ -40,8 +40,8 @@ const App = () => {
                 <Route path="/" exact>
                   <Home />
                 </Route>
-                {/* Binance Smart Change */}
-                {/* Amm */}
+                Binance Smart Change
+                Amm
                 <Route path="/how-to-use-metamask-for-binance-smart-chain">
                   <Home />
                 </Route>

@@ -5,9 +5,9 @@ import styled from 'styled-components'
 const ListIcon = () => {
   return (
     <BoxIcon className="hide_pc">
-      <a target="_blank" href="https://Pegaswap.finance/"><i class="fa fa-home"></i></a>
-      <a target="_blank" ><i class="fa fa-twitter"></i></a>
-      <a target="_blank"><i class="fa fa-github"></i></a>
+      <a target="_blank" href="https://pegaswap.com/"><i class="fa fa-home"></i></a>
+      <a target="_blank" href="https://twitter.com/PegaSwap"><i class="fa fa-twitter"></i></a>
+      <a target="_blank" href="https://github.com/pegaswap-defi"><i class="fa fa-github"></i></a>
     </BoxIcon>
   )
 }
@@ -31,12 +31,10 @@ const BoxIcon = styled.div`
     }
 
   }
-
+  
   @media(max-width:576px){
     display:none;
   }
-
-
 `
 
 
