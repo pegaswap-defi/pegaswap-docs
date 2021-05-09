@@ -19,6 +19,7 @@ const Nav = () => {
   const [binance, setBinance] = useState(false);
   const [amm, setAmm] = useState(false);
   const [welcome, setWelcome] = useState(false);
+  const [swap, setSwap] = useState(false);
 
   const openWelcome = () => {
     setWelcome(!welcome);
@@ -32,6 +33,9 @@ const Nav = () => {
     setAmm(!amm);
   }
 
+  const openSwap = () => {
+    setSwap(!swap)
+  }
 
 
   return (
@@ -50,15 +54,13 @@ const Nav = () => {
             <StyledLink activeClassName='active' to='/welcome/what-is-pegaswap'>What Is PegaSwap ? </StyledLink>
             <StyledLink activeClassName='active' to='/welcome/pegaswap-is-on-the-binance-smart-chain'>PegaSwap is on the Binance Smart Chain</StyledLink>
             <StyledLink activeClassName='active' to='/welcome/what-can-you-do-on-pegaswao'>What can you do on PegaSwap?</StyledLink>
-            <StyledLink activeClassName='active' to='/welcome/low-fees-and-fast-transaction'>Low Fees and Fast Transactions</StyledLink>
-            <StyledLink activeClassName='active' to='/welcome/no-kyc-requirement'>No KYC Requirement</StyledLink>
-            <StyledLink activeClassName='active' to='/welcome/pegaswap-fees'>PegaSwap Fees</StyledLink>
             <StyledLink activeClassName='active' to='/welcome/community-socials'>Community & Socials</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/roadmap'>Roadmap</StyledLink>
           </WrapperWelcomeLink>
         </TitleMenuDropdown>
       </ul>
       <ul className="sidebar-middle">
-        <TitleSide>General</TitleSide>
+        <TitleSide >General</TitleSide>
         <TitleMenuDropdown className="box-childpage">
           <Flex onClick={openBinance}>
             <img src="../images/icon-docs/yield.svg" />
@@ -94,65 +96,74 @@ const Nav = () => {
             <StyledDropdownLink activeClassName='active' to='/amm/closing-thoughts'>Closing thoughts</StyledDropdownLink>
           </DropdownMenu>
         </TitleMenuDropdown>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/product-pools"
-        ><Flex>
+        <TitleSide style={{ marginTop: '20px' }}>PegaSwap Protocol</TitleSide>
+
+        <TitleMenuDropdown className="box-childpage">
+          <FlexSwap
+            className="link-mode"
+            exact
+            activeClassName="active"
+            to="/swap" onClick={openSwap}>
             <img src="../images/icon-docs/pool.svg" />
-            <span>PegaSwap Pools</span>
-          </Flex>
-        </StyledLink>
+            <div>
+              <span className="box-title" >
+                Swap
+              </span>
+              <i style={{ transform: !swap ? 'rotate(0)' : 'rotate(90deg)', transition: 'all ease-in-out .3s' }} className="fas fa-chevron-right"></i>
+            </div>
+          </FlexSwap>
+          <DropdownMenu style={{ maxHeight: !swap ? '0' : '400px' }} >
+            <StyledDropdownLink activeClassName='active' to='/swap/How-to-Trade-on-PegaSwap'>How to Trade on PegaSwap</StyledDropdownLink>
+            <StyledDropdownLink activeClassName='active' to='/swap/Liquidity-Pools-Adding-Liquidity'>Liquidity Pools & Adding Liquidity</StyledDropdownLink>
+          </DropdownMenu>
+        </TitleMenuDropdown>
+
+
         <StyledLink
           className="link-mode"
           exact
           activeClassName="active"
           to="/yield-farming"
-        >
-          <div className="box-childpage">
-            <Flex>
-              <img src="../images/icon-docs/yield.svg" />
-              <span className="box-title" >
-                Yield Farming
-              </span>
-            </Flex>
-          </div>
+        ><Flex>
+            <img src="../images/icon-docs/yield.svg" />
+            <span>Yield Farming</span>
+          </Flex>
+        </StyledLink>
 
-        </StyledLink>
         <StyledLink
           className="link-mode"
           exact
           activeClassName="active"
-          to="/product-staking"
-        >
-          <Flex>
+          to="/staking-pools"
+        ><Flex>
             <img src="../images/icon-docs/staking.svg" />
-            <span> PegaSwap Staking</span>
+            <span>Staking Pools</span>
           </Flex>
         </StyledLink>
+
         <StyledLink
           className="link-mode"
           exact
           activeClassName="active"
-          to="/sale"
-        >
-          <Flex>
-            <img src="../images/icon-docs/sale.svg" />
-            <span>Sale</span>
-          </Flex>
-        </StyledLink>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/about-nfts"
-        >
-          <Flex>
+          to="/none-fungible-token"
+        ><Flex>
             <img src="../images/icon-docs/nfts.svg" />
-            <span>NFTs</span>
+            <span>Non Fungible Token (NFTs)</span>
           </Flex>
         </StyledLink>
+
+        <StyledLink
+          className="link-mode"
+          exact
+          activeClassName="active"
+          to="/gaming"
+        ><Flex>
+            <img src="../images/icon-docs/yield.svg" />
+            <span>Gaming</span>
+          </Flex>
+        </StyledLink>
+
+
       </ul>
       <ul className="sidebar-middle">
         <TitleSide>The Nominations</TitleSide>
@@ -372,6 +383,28 @@ const Flex = styled.div`
       right: 0;
     }
 `
+const FlexSwap = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  width: 90%;
+  position: relative;
+  i {
+    position: absolute;
+    right: 0;
+  }
+  &.active {
+    font-weight: bold;
+  }
+  :hover {
+    color: black;
+    text-decoration: none;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  color: black;
+`
+
 const BoxSidebar = styled.div`
     position:relative;
 
