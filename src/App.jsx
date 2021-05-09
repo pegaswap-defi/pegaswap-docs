@@ -14,6 +14,11 @@ import TrustWallet from './views/TrustWallet'
 import Binance from './views/BinanceSmartChange'
 import Amm from './views/Amm'
 import Welcome from './views/Welcome'
+import Swap from './views/Swap'
+import Yield from './views/YieldFarming'
+import Staking from './views/Staking'
+import NFTs from './views/NFTs'
+import Game from './views/Gaming'
 
 
 
@@ -36,6 +41,11 @@ const App = () => {
               <Welcome />
               <Amm />
               <Binance />
+              <Swap />
+              <Yield />
+              <Staking />
+              <NFTs />
+              <Game />
               <Switch>
                 <Route path="/" exact>
                   <Home />
