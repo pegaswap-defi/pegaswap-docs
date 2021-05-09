@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Title = ({ title, image }) => {
 
   return <ContentTitle className="title">
-    <img className="thum-nav" src={image} alt="Justswap" /> {title}
+    {title}
   </ContentTitle>;
 };
 

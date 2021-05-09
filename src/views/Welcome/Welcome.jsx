@@ -3,12 +3,10 @@ import styled from 'styled-components'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Intro from './components/Intro'
 import Community from './components/Community'
-import KYC from './components/KYC'
-import Lowfees from './components/Lowfees'
 import PegaswapOn from './components/PegaOnSC'
-import PegaswapFee from './components/PegaswapFee'
 import Whatcan from './components/Whatcan'
 import Whatis from './components/Whatis'
+import Roadmap from './components/Roadmap'
 
 
 const BinanceSmartChange = () => {
@@ -28,17 +26,11 @@ const BinanceSmartChange = () => {
                 <Route exact path="/welcome/what-can-you-do-on-pegaswao">
                     <Whatcan />
                 </Route>
-                <Route exact path="/welcome/low-fees-and-fast-transaction">
-                    <Lowfees />
-                </Route>
-                <Route exact path="/welcome/no-kyc-requirement">
-                    <KYC />
-                </Route>
-                <Route exact path="/welcome/pegaswap-fees">
-                    <PegaswapFee />
-                </Route>
                 <Route exact path="/welcome/community-socials">
                     <Community />
+                </Route>
+                <Route exact path="/welcome/roadmap">
+                    <Roadmap />
                 </Route>
             </Switch>
         </StyledPage>
