@@ -9,7 +9,7 @@ import ImpermanentLost from './components/ImpermanentLost'
 
 const Amm = () => {
 
-    return(
+    return (
         <StyledPage>
             <Switch>
                 <Route exact path="/amm/how-does-an-automated-market-maker-amm-work">

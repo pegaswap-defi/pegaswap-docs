@@ -165,20 +165,7 @@ const Nav = () => {
 
 
       </ul>
-      <ul className="sidebar-middle">
-        <TitleSide>The Nominations</TitleSide>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/the-basics"
-        >
-          <Flex>
-            <img src="../images/icon-docs/basic.svg" />
-            <span> The Basics</span>
-          </Flex>
-        </StyledLink>
-      </ul>
+
       <ul className="sidebar-middle">
         <TitleSide>Guides</TitleSide>
         <StyledLink
@@ -204,43 +191,10 @@ const Nav = () => {
           </Flex>
         </StyledLink>
       </ul>
-      <ul className="sidebar-middle">
-        <TitleSide>Governance</TitleSide>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/current-governance-mdoel"
-        >
-          <Flex>
-            <img src="../images/icon-docs/Curent.svg" />
 
-            <span>Current governance model</span>
-          </Flex>
-        </StyledLink>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/proposals-and-voting"
-        >
-          <Flex>
-            <img src="../images/icon-docs/proposal.svg" />
-
-            <span>Proposals &amp; voting</span>
-          </Flex>
-        </StyledLink>
-      </ul>
       <ul className="sidebar-middle">
         <TitleSide>Ecosystem</TitleSide>
-        <StyledLink
-          className="link-mode"
-          exact
-          activeClassName="active"
-          to="/all-official-pegaswap-links"
-        >
-          Official PegaSwap links
-          </StyledLink>
+
         <StyledLink
           className="link-mode"
           exact

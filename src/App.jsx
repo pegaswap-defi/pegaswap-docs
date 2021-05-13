@@ -52,10 +52,10 @@ const App = () => {
                 </Route>
                 Binance Smart Change
                 Amm
-                <Route path="/how-to-use-metamask-for-binance-smart-chain">
+                <Route exact path="/how-to-use-metamask-for-binance-smart-chain">
                   <Home />
                 </Route>
-                <Route path="/how-to-set-up-and-use-trust-wallet-for-binance-smart-chain">
+                <Route exact path="/how-to-set-up-and-use-trust-wallet-for-binance-smart-chain">
                   <TrustWallet />
                 </Route>
               </Switch>
