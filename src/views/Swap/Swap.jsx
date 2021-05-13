@@ -12,7 +12,8 @@ const Swap = () => {
         <StyledPage>
             <Switch>
                 <Route exact path="/swap">
-                    <p>Pegaswap is a decentralized exchange for swapping <a href="https://academy.binance.com/en/glossary/bep-20" target="_blank">BEP-20 tokens</a>.</p>
+                    {/* <p>Pegaswap is a decentralized exchange for swapping <a href="https://academy.binance.com/en/glossary/bep-20" target="_blank">BEP-20 tokens</a>.</p> */}
+                    <p>Pegaswap is a decentralized exchange for swapping <a href="#" >BEP-20 tokens</a>.</p>
                     <Thumb path="../images/thumb/protocol2@2x.JPG" />
                 </Route>
                 <Route exact path="/swap/How-to-Trade-on-PegaSwap">
