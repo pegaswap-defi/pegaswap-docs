@@ -23,7 +23,7 @@ const BinanceSmartChange = () => {
                 <Route exact path="/welcome/pegaswap-is-on-the-binance-smart-chain">
                     <PegaswapOn />
                 </Route>
-                <Route exact path="/welcome/what-can-you-do-on-pegaswao">
+                <Route exact path="/welcome/what-can-you-do-on-pegaswap">
                     <Whatcan />
                 </Route>
                 <Route exact path="/welcome/community-socials">
