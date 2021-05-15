@@ -53,7 +53,7 @@ const Nav = () => {
             <StyledLink activeClassName='active' to='/welcome/introduction'>Introduction</StyledLink>
             <StyledLink activeClassName='active' to='/welcome/what-is-pegaswap'>What Is PegaSwap ? </StyledLink>
             <StyledLink activeClassName='active' to='/welcome/pegaswap-is-on-the-binance-smart-chain'>PegaSwap is on the Binance Smart Chain</StyledLink>
-            <StyledLink activeClassName='active' to='/welcome/what-can-you-do-on-pegaswao'>What can you do on PegaSwap?</StyledLink>
+            <StyledLink activeClassName='active' to='/welcome/what-can-you-do-on-pegaswap'>What can you do on PegaSwap?</StyledLink>
             <StyledLink activeClassName='active' to='/welcome/community-socials'>Community & Socials</StyledLink>
             <StyledLink activeClassName='active' to='/welcome/roadmap'>Roadmap</StyledLink>
           </WrapperWelcomeLink>
