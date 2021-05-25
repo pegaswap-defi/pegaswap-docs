@@ -163,7 +163,6 @@ const Nav = () => {
           </Flex>
         </StyledLink>
 
-
       </ul>
 
       <ul className="sidebar-middle">
@@ -192,7 +191,7 @@ const Nav = () => {
         </StyledLink>
       </ul>
 
-      <ul className="sidebar-middle">
+      {/* <ul className="sidebar-middle">
         <TitleSide>Ecosystem</TitleSide>
 
         <StyledLink
@@ -206,7 +205,7 @@ const Nav = () => {
             <span>FAQ</span>
           </Flex>
         </StyledLink>
-      </ul>
+      </ul> */}
     </BoxSidebar>
   );
 }
