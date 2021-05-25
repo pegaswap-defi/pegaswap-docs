@@ -13,7 +13,7 @@ const Howto = () => {
             <Title title="How to Trade on PegaSwap"></Title>
             <Thumb path="../images/thumb/swap.png" />
             <ul>
-                <li>1. Go to the exchange page <a href="#" target="_blank">here</a>.</li>
+                <li>1. Go to the exchange page <a href="https://pegaswap.com/#/" target="_blank">here</a>.</li>
                 <li>2. Unlock your Binance Smart Chain Wallet (top right-hand side).</li>
                 <li>3. Select the tokens you wish to trade and enter the amount.</li>
                 <li>4. Check the details, and click “Swap”.</li>

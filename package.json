@@ -1,7 +1,7 @@
 {
-  "name": "@jusswap/info",
+  "name": "@pegaswap/info",
   "private": true,
-  "homepage": "https://info.jusswap.com",
+  "homepage": "https://pegaswap.com",
   "devDependencies": {
     "@popperjs/core": "^2.4.2",
     "@reach/portal": "^0.10.3",
