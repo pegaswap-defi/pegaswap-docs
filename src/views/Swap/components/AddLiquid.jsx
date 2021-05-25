@@ -11,7 +11,7 @@ const AddLiquid = () => {
     return (
         <StyledPage>
             <Title title="Liquidity Pools & Adding Liquidity"></Title>
-            <p>about PegaSwap's Liquidity Pools ( ( coming soon)</p>
+            <p>About PegaSwap's Liquidity Pools (coming soon)</p>
         </StyledPage>
     )
 }
