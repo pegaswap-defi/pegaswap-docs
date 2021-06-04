@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27c427aab1946306dbd3666d93af7718",
+    "revision": "4bb06d878fd005e7aece7d69c8a7ae6e",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.02ad68ca.chunk.css"
   },
   {
-    "revision": "db03a5e0ab2cf9c50def",
-    "url": "/static/css/main.6d20668e.chunk.css"
+    "revision": "fa68e2015514fb2f444e",
+    "url": "/static/css/main.c8a2b8e4.chunk.css"
   },
   {
     "revision": "de1560388e62923ed23c",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.f06f18a8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "db03a5e0ab2cf9c50def",
-    "url": "/static/js/main.8e2c7609.chunk.js"
+    "revision": "fa68e2015514fb2f444e",
+    "url": "/static/js/main.1d41574e.chunk.js"
   },
   {
     "revision": "3a040e9b9030d9343579",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fa-brands-400.0ce1e868.woff"
   },
   {
-    "revision": "6abcc99ab68a1795ef9d4eae086b1ee3",
-    "url": "/static/media/fa-brands-400.6abcc99a.svg"
+    "revision": "5d10d00980077f67990f73b1961bc46e",
+    "url": "/static/media/fa-brands-400.5d10d009.svg"
   },
   {
     "revision": "d28c96cabe5302f1b2c90275cd3f4e69",
@@ -60,20 +60,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fa-regular-400.3cace4a0.woff"
   },
   {
-    "revision": "40972947215042e62e00a196a4738dbf",
-    "url": "/static/media/fa-regular-400.40972947.svg"
-  },
-  {
     "revision": "847712aaabbeba674afdda86d31cab17",
     "url": "/static/media/fa-regular-400.847712aa.woff2"
+  },
+  {
+    "revision": "d0fdc7c20b0b0b1aaf27327547735fa3",
+    "url": "/static/media/fa-regular-400.d0fdc7c2.svg"
   },
   {
     "revision": "00bb62bc33034479d5e82a0fd1c5efe3",
     "url": "/static/media/fa-solid-900.00bb62bc.eot"
   },
   {
-    "revision": "1cac85c7de3251ab3c9e9bc73aea7949",
-    "url": "/static/media/fa-solid-900.1cac85c7.svg"
+    "revision": "2306f642b31b774ba1d8b6b784539e19",
+    "url": "/static/media/fa-solid-900.2306f642.svg"
   },
   {
     "revision": "260d033f79f75d670fd09d8cf7c8bf8d",
