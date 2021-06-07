@@ -71,9 +71,15 @@ const StyledPage = styled.div`
 
 const ThumbMobile = styled.div`
     margin: 2rem auto;
-    max-width: 300px;
+    max-width: 400px;
     img {
         width: 100%;
+    }
+    @media(max-width: 768px) {
+        max-width: 350px;
+    }
+    @media(max-width: 576px) {
+        max-width: 300px;
     }
 `
 
